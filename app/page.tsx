@@ -250,7 +250,7 @@ export default function ChatInterface() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/chat", {
+      const response = await fetch("http://54.221.45.105:5000/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
