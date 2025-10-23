@@ -17,6 +17,16 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+html, body, #__next {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hide scrollbar for all browsers */
@@ -34,6 +44,30 @@ body {
 /* Ensure scrolling still works */
 .hide-scrollbar {
   overflow-y: scroll;
+}
+
+/* ChatGPT-style scrollbar */
+.chat-messages-container {
+  scroll-behavior: smooth;
+  scroll-padding: 20px;
+}
+
+.chat-messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages-container::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.chat-messages-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.8);
 }
 
 @layer utilities {
